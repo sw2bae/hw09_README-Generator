@@ -1,7 +1,7 @@
 
   # undefined
   
-  * At least one badge
+* At least one badge
 * Project title
 * Description
 * Table of Contents
@@ -11,7 +11,7 @@
 * Contributing
 * Tests
 * Questions
-  * User GitHub profile picture
-  * User GitHub email
+* User GitHub profile picture
+* User GitHub email
 
   
