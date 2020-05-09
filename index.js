@@ -10,27 +10,48 @@ function questions() {
 
         {
             type: "input",
-            message: "What is GitHub your user name?",
-            name: "username"
+            message: "GitHub User Name ?",
+            name: "username",
         },
-
-        // * At least one badge
-        // * Project title
-        // * Description
-        // * Table of Contents
-        // * Installation
-        // * Usage
-        // * License
-        // * Contributing
-        // * Tests
-        // * Questions
-        //   * User GitHub profile picture
-        //   * User GitHub email
-
+        {
+            type : "input",
+            message: "Project Title ?",
+            name: "title",
+        },
+        {
+            type : "input",
+            message: "Project Description ?",
+            name: "description",
+        },
+        {
+            type : "input",
+            message: "Project Installation ?",
+            name: "installation",
+        },
+        {
+            type : "input",
+            message: "Project Usage ?",
+            name: "usage",
+        },
+        {
+            type : "input",
+            message: "Project License ?",
+            name: "license",
+        },
+        {
+            type : "input",
+            message: "Project Contributing ?",
+            name: "contributing",
+        },
+        {
+            type : "input",
+            message: "Project Test ?",
+            name: "test",
+        },
     ])
         .then(({username}) => {
-            const queryURL = `https://api.github.com/users/${username}/repos?per_page=100`;
-            axios.get(queryURL).then(({data}) => {
+            const queryURL = `https://api.github.com/users/${username}`;
+            axios.get(queryURL).then((data) => {
                 console.log(data);
             });
         });
@@ -42,17 +63,18 @@ function generateMarkdown(data) {
   # ${data.title}
   
 * At least one badge
-* Project title
-* Description
-* Table of Contents
-* Installation
-* Usage
-* License
-* Contributing
-* Tests
-* Questions
-* User GitHub profile picture
-* User GitHub email
+* Project title                 : ${data.title}
+* Description                   : ${data.description}
+
+* Table of Contents             
+* Installation                  : ${data.installation}
+* Usage                         : ${data.usage}
+* License                       : ${data.license}
+* Contributing                  : ${data.contributing}
+* Tests                         : ${data.test}
+* Questions                     : ${data.title}
+* User GitHub profile picture   : ${data.avatar_url}
+* User GitHub email             : ${data.username}
 
   `;
 }
