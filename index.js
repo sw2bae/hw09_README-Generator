@@ -48,19 +48,19 @@ function questions() {
             message: "Project Test ?",
             name: "test",
         },
-    ])
-        .then(({username}) => {
-            const queryURL = `https://api.github.com/users/${username}`;
-            axios.get(queryURL).then((data) => {
-                console.log(data);
-            });
-        });
-}
+    ]);
+        // .then(({username}) => {
+        //     const queryURL = `https://api.github.com/users/${username}`;
+        //     axios.get(queryURL).then(({data}) => {
+        //         console.log(data);
+        //     });
+        // });
+};
 
 function generateMarkdown(data) {
 
     return `
-  # ${data.title}
+# ${data.title}
   
 * At least one badge
 * Project title                 : ${data.title}
@@ -73,8 +73,11 @@ function generateMarkdown(data) {
 * Contributing                  : ${data.contributing}
 * Tests                         : ${data.test}
 * Questions                     : ${data.title}
+
+* User Name                     : ${data.name}
 * User GitHub profile picture   : ${data.avatar_url}
-* User GitHub email             : ${data.username}
+* User GitHub URL               : ${data.html_url}
+
 
   `;
 }
@@ -83,11 +86,22 @@ function generateMarkdown(data) {
 async function init() {
 
     try {
+       
 
-        const userInput = questions();
+        
+        const userInput = await questions();
+
+       
+        const queryURL = `https://api.github.com/users/${userInput.username}`;
+        await axios.get(queryURL);
+   
+
         const markdown = generateMarkdown(userInput);
 
+        
+
         await writeFileAsync("README.md", markdown);
+
         console.log("***README FILE GENERATED***");
     }
     catch (err) {
