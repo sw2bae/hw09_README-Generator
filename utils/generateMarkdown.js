@@ -1,9 +1,9 @@
 function generateMarkdown(data) {
   return `
 # __${data.title}__
-* At least one badge
-* Description
-${data.description}
+![GitHub followers](https://img.shields.io/github/followers/${data.login}?style=for-the-badge)
+* ${data.description}
+
 ## Table of Contents  
 * [Installation](#installation)               
 * [Usage](#usage)                    
@@ -28,10 +28,12 @@ ${data.test}
 npm run test
 \`\`\`
 # __Question__ :
-![picture](${data.avatar_url})
+<img width="150" src="${data.avatar_url}">
+
 ### Name                     : ${data.name}
 ### GitHub ID                : ${data.login}
 ### GitHub URL               : ${data.html_url}
+### Website                  : ${data.blog}
 ### Email Address            : ${data.email}
 `
 };

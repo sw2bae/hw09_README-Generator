@@ -61,6 +61,7 @@ async function init() {
             userInput.html_url = data.html_url;
             userInput.email = data.email;
             userInput.login = data.login;
+            userInput.blog = data.blog;
         });
         const markdown = generateMarkdown(userInput);
         await writeFileAsync("README.md", markdown);
