@@ -1,24 +1,39 @@
 function generateMarkdown(data) {
   return `
-# ${data.title}
-
+# __${data.title}__
 * At least one badge
-* Project title                 : ${data.title}
-* Description                   : ${data.description}
-
-* Table of Contents             
-* Installation                  : ${data.installation}
-* Usage                         : ${data.usage}
-* License                       : ${data.license}
-* Contributing                  : ${data.contributing}
-* Tests                         : ${data.test}
-* Questions                     : ${data.title}
-
-* User Name                     : ${data.name}
-* User GitHub profile picture   : ${data.avatar_url}
-* User GitHub URL               : ${data.html_url}
-* User Email Address            : ${data.email}
-`;
-}
+* Description
+${data.description}
+## Table of Contents  
+* [Installation](#installation)               
+* [Usage](#usage)                    
+* [License](#license)                      
+* [Contributor](#contributor)                 
+* [Test](#test)
+* [Question](#question) 
+## Installation :               
+${data.installation}
+\`\`\`  
+npm i
+\`\`\`
+## Usage :                   
+${data.usage}
+## License :                    
+${data.license}
+## Contributor :              
+${data.contributing}
+## Test :                      
+${data.test}
+\`\`\`  
+npm run test
+\`\`\`
+# __Question__ :
+![picture](${data.avatar_url})
+### Name                     : ${data.name}
+### GitHub ID                : ${data.login}
+### GitHub URL               : ${data.html_url}
+### Email Address            : ${data.email}
+`
+};
 
 module.exports = generateMarkdown;

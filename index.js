@@ -24,7 +24,7 @@ function questions() {
         },
         {
             type: "input",
-            message: "Project Installation ?",
+            message: "npm Installation ?",
             name: "installation",
         },
         {
@@ -39,12 +39,12 @@ function questions() {
         },
         {
             type: "input",
-            message: "Project Contributing ?",
+            message: "Project Contributor ?",
             name: "contributing",
         },
         {
             type: "input",
-            message: "Project Test ?",
+            message: "Test npm ?",
             name: "test",
         },
     ]);
@@ -60,6 +60,7 @@ async function init() {
             userInput.avatar_url = data.avatar_url;
             userInput.html_url = data.html_url;
             userInput.email = data.email;
+            userInput.login = data.login;
         });
         const markdown = generateMarkdown(userInput);
         await writeFileAsync("README.md", markdown);
