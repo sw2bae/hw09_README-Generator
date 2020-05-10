@@ -29,8 +29,8 @@ npm run test
 # __Question__ :
 <img width="150" src="https://avatars0.githubusercontent.com/u/60491242?v=4">
 
-### Name                     : Sang Bae
-### GitHub ID                : sw2bae
-### GitHub URL               : https://github.com/sw2bae
-### Website                  : https://www.linkedin.com/in/sang-bae-8a38011a0/
-### Email Address            : null
+* #### Name                     : Sang Bae
+* #### GitHub ID                : sw2bae
+* #### GitHub URL               : https://github.com/sw2bae
+* #### Website                  : https://www.linkedin.com/in/sang-bae-8a38011a0/
+* #### Email Address            : null

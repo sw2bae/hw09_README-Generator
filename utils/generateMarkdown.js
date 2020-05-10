@@ -30,11 +30,11 @@ npm run test
 # __Question__ :
 <img width="150" src="${data.avatar_url}">
 
-### Name                     : ${data.name}
-### GitHub ID                : ${data.login}
-### GitHub URL               : ${data.html_url}
-### Website                  : ${data.blog}
-### Email Address            : ${data.email}
+* #### Name                     : ${data.name}
+* #### GitHub ID                : ${data.login}
+* #### GitHub URL               : ${data.html_url}
+* #### Website                  : ${data.blog}
+* #### Email Address            : ${data.email}
 `
 };
 
