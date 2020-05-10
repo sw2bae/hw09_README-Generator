@@ -4,26 +4,26 @@ function generateMarkdown(data) {
 ![GitHub followers](https://img.shields.io/github/followers/${data.login}?style=for-the-badge)
 * ${data.description}
 
-## Table of Contents  
+## __Table of Contents__  
 * [Installation](#installation)               
 * [Usage](#usage)                    
 * [License](#license)                      
 * [Contributor](#contributor)                 
 * [Test](#test)
 * [Question](#question) 
-## Installation :               
-${data.installation}
+## __Installation__ :               
+* ${data.installation}
 \`\`\`  
 npm i
 \`\`\`
-## Usage :                   
-${data.usage}
-## License :                    
-${data.license}
-## Contributor :              
-${data.contributing}
-## Test :                      
-${data.test}
+## __Usage__ :                   
+* ${data.usage}
+## __License__ :                    
+* ${data.license}
+## __Contributor__ :              
+* ${data.contributing}
+## __Test__ :                      
+* ${data.test}
 \`\`\`  
 npm run test
 \`\`\`

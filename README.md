@@ -1,28 +1,28 @@
 
-# __ReadMe Generator__
+# __README Generator__
 ![GitHub followers](https://img.shields.io/github/followers/sw2bae?style=for-the-badge)
-* Automatically genreating a README.MD file
+* Creating README.md file automatically for users
 
-## Table of Contents  
+## __Table of Contents__  
 * [Installation](#installation)               
 * [Usage](#usage)                    
 * [License](#license)                      
 * [Contributor](#contributor)                 
 * [Test](#test)
 * [Question](#question) 
-## Installation :               
-inquirer/axios
+## __Installation__ :               
+* inquirer & axios
 ```  
 npm i
 ```
-## Usage :                   
-will automatically generate a README.md file based on you awsering the questions
-## License :                    
-NA
-## Contributor :              
-Self Project
-## Test :                      
-Jest/ No Test Code yet
+## __Usage__ :                   
+* User can easily generate a README.md file from answering questions
+## __License__ :                    
+* NA
+## __Contributor__ :              
+* Self Project
+## __Test__ :                      
+* Jest / No Test Code Yet
 ```  
 npm run test
 ```
